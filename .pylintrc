@@ -1,0 +1,30 @@
+[MASTER]
+# A comma-separated list of package or module names from where C extensions may
+# be loaded. Extensions are loading into the active Python interpreter and may
+# run arbitrary code.
+extension-pkg-whitelist=lxml
+[MESSAGES CONTROL]
+# Disabled messages
+disable=R0903, # Too few public methods
+        C0103, # Constant name doesn't conform to UPPER_CASE naming style
+        R0914, # Too many local variables
+        R0912, # Too many branches
+        R0801, # duplicate code
+        R0401, # Cyclic import
+        W1202, # Logging format interpolation
+        W0703  # Catching too general exception
+[FORMAT]
+# Maximum number of characters on a single line.
+max-line-length=120
+[BASIC]
+# for pylint_quotes
+string-quote=single-avoid-escape
+# Good variable names which should always be accepted, separated by a comma.
+good-names=i,j,k,e,ex,Run,_
+# Limit max function arguments
+max-args=6
+[TYPECHECK]
+# List of class names for which member attributes should not be checked.
+ignored-classes=Exception
+# List of module names for which member attributes should not be checked.
+ignored-modules=flask_sqlalchemy, psycopg2.errors, sqlalchemy
